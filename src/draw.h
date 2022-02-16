@@ -3,7 +3,6 @@
 #include "symbols.h"
 
 #include <array>
-#include <math.h>
 #include <string>
 #include <vector>
 
