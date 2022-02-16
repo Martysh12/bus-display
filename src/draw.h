@@ -8,9 +8,9 @@
 
 /* CONSTANTS */
 
-constexpr int DISP_NUM_WIDTH   = 38;
+constexpr int DISP_NUM_WIDTH   = 39; // FIXME: Setting width to 38 (which is the correct width, 3 characters) causes crash
 constexpr int DISP_NUM_HEIGHT  = 20;
-                                     
+
 constexpr int DISP_SIDE_WIDTH  = 104;
 constexpr int DISP_SIDE_HEIGHT = 20;
 
