@@ -11,3 +11,6 @@ After finishing the drawing code for the different displays, I'll start working 
 
 ## Credit me!
 If you decide to use my code for your project, or if you're a bus company in need of a display system (and you want to use my project for some reason, which would be a bad idea), please credit me!
+
+## DISCLAIMER
+Using my code for anything serious is actually a shit idea (as I said above)... please don't do this.
