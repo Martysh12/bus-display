@@ -3,7 +3,8 @@
 
 int main(int argc, char* argv[])
 {
-    std::cout << stringify_disp_num(draw_disp_num(420)) << std::endl;
+    // Program takes quite a while to run... Gotta optimize it.
+    std::cout << stringify_disp_num(draw_disp_num(21)) << std::endl;
     return 0;
 }
 

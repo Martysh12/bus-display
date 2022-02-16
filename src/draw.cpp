@@ -228,6 +228,13 @@ DISP_NUM_ROW disp_num_center_rows(std::vector<SYM_ROW> rows)
 
 DISP_NUM draw_disp_num(int bus_num)
 {
+    if (bus_num < 0 || bus_num >= 1000) {
+        // Displaying negative bus numbers is possible, because we're converting the int to a std::string.
+        // You could theoretically remove the check, but... why?
+        
+        return DISP_NUM {}; // Returning empty display to symbolize that you fucked up
+    }
+
     std::string digits = std::to_string(bus_num);
 
     std::vector<SYM> symbols {}; // Empty vector for storing symbols
