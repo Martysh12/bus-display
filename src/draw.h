@@ -8,7 +8,7 @@
 
 /* CONSTANTS */
 
-constexpr int DISP_NUM_WIDTH   = 39;
+constexpr int DISP_NUM_WIDTH   = 38;
 constexpr int DISP_NUM_HEIGHT  = 20;
                                      
 constexpr int DISP_SIDE_WIDTH  = 104;
