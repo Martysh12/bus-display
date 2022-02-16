@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+*.un~
+Makefile~
+*.swp
+*.cpp~
+*.h~
