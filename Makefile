@@ -1,5 +1,5 @@
 CXX := g++
-CXXFLAGS := -Wall
+CXXFLAGS := -Wall -O2
 
 RM := del /s /q
 
