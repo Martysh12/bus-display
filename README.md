@@ -1,3 +1,7 @@
+[![forthebadge](https://forthebadge.com/images/badges/0-percent-optimized.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c-plus-plus.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/it-works-why.svg)](https://forthebadge.com)
+
 # bus-display
 Bad C++ console app to display data about a bus on a pixel display.  
 Inspired by display systems of Israeli buses.
