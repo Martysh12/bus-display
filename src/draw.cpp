@@ -199,7 +199,7 @@ SYM get_symbol_from_char(char c)
 DISP_NUM_ROW disp_num_center_rows(std::vector<SYM_ROW> rows)
 {
     float padding = (float)(DISP_NUM_WIDTH - (SYM_WIDTH * rows.size() + rows.size())) / 2;
-    int padding_l = floor(padding);
+    int padding_l = padding;
     // int padding_r = ceil(padding);
  
     std::vector<bool> joined_rows {};
@@ -220,6 +220,7 @@ DISP_NUM_ROW disp_num_center_rows(std::vector<SYM_ROW> rows)
     // Copying vector to our final row
     for (unsigned int i = 0; i < joined_rows.size(); ++i)
     {
+        // very smart padding trick :bigbrain:
         final_row[i + padding_l] = joined_rows[i];
     }
 
@@ -278,7 +279,7 @@ std::string stringify_disp_num(DISP_NUM disp)
     {
         for (const auto& x : y)
         {
-            buf += x ? "##" : "..";
+            buf += x ? "##" : ".."; // 2 characters make a square
         }
 
         buf += '\n';
