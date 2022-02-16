@@ -198,9 +198,7 @@ SYM get_symbol_from_char(char c)
 
 DISP_NUM_ROW disp_num_center_rows(std::vector<SYM_ROW> rows)
 {
-    float padding = (float)(DISP_NUM_WIDTH - (SYM_WIDTH * rows.size() + rows.size())) / 2;
-    int padding_l = padding;
-    // int padding_r = ceil(padding);
+    int padding_l = (DISP_NUM_WIDTH - (SYM_WIDTH * rows.size() + rows.size())) / 2;
  
     std::vector<bool> joined_rows {};
     joined_rows.reserve((rows.size() * SYM_WIDTH) + rows.size() - 1);
