@@ -1,8 +1,17 @@
 #include "draw.h"
 
+/**
+ * Convert character into pixel representation.
+ *
+ * Convert character c into a pixel representation.
+ *
+ * @param c The character to draw
+ * @return 2D std::array of bool representing character c
+ */
 SYM get_symbol_from_char(char c)
 {
     // Big switch-case to check all characters
+    // NOTE: This might not be the most efficient way
     switch (c)
     {
         case '0':
@@ -196,6 +205,14 @@ SYM get_symbol_from_char(char c)
     }
 }
 
+/**
+ * Join and center symbol rows.
+ *
+ * Join all elements of rows (delimited by ' '), center them, and return them.
+ *
+ * @param rows The rows to join & center
+ * @return Big row consisting of joined & centered rows
+ */
 DISP_NUM_ROW disp_num_center_rows(std::vector<SYM_ROW> rows)
 {
     int padding_l = (DISP_NUM_WIDTH - (SYM_WIDTH * rows.size() + rows.size())) / 2;
@@ -225,6 +242,15 @@ DISP_NUM_ROW disp_num_center_rows(std::vector<SYM_ROW> rows)
     return final_row;
 }
 
+/**
+ * Draw number bus_num onto a 2D pixel matrix.
+ *
+ * Draws number bus_num, and centers it on a 2D pixel matrix.
+ * Used for drawing the number-only displays on buses.
+ *
+ * @param bus_num The number to draw
+ * @return The finished 2D pixel matrix.
+ */
 DISP_NUM draw_disp_num(int bus_num)
 {
     if (bus_num < 0 || bus_num >= 1000) {
@@ -261,6 +287,16 @@ DISP_NUM draw_disp_num(int bus_num)
     return display;
 }
 
+/**
+ * Draw number bus_num and string bus_desc onto a 2D pixel matrix.
+ *
+ * Draws number bus_num on the leftmost side, and draws string bus_desc.
+ * Used for drawing the number-and-description displays on buses.
+ *
+ * @param bus_num The number to draw
+ * @param bus_desc The text to draw
+ * @return The finished 2D pixel matrix.
+ */
 DISP_SIDE draw_disp_side(int bus_num, std::string bus_desc)
 {
     // TODO: Displaying advanced infromation (bus description, etc.) with a scrolling effect.
@@ -268,6 +304,16 @@ DISP_SIDE draw_disp_side(int bus_num, std::string bus_desc)
 }
 
 // TODO: Following functions are for debug. Remove it after debugging.
+
+/**
+ * Convert 2D pixel matrix into a printable string.
+ *
+ * Convert 2D pixel matrix into a printable string
+ * that can be displayed directly in the terminal.
+ *
+ * @param disp The 2D pixel matrix
+ * @return Printable string representation of the 2D pixel matrix
+ */
 std::string stringify_disp_num(DISP_NUM disp)
 {
     std::string buf;
@@ -286,6 +332,15 @@ std::string stringify_disp_num(DISP_NUM disp)
     return buf;
 }
 
+/**
+ * Convert 2D pixel matrix into a printable string.
+ *
+ * Convert 2D pixel matrix into a printable string
+ * that can be displayed directly in the terminal.
+ *
+ * @param disp The 2D pixel matrix
+ * @return Printable string representation of the 2D pixel matrix
+ */
 std::string stringify_disp_side(DISP_SIDE disp)
 {
     std::string buf;
