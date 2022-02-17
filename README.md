@@ -1,6 +1,10 @@
-[![forthebadge](https://forthebadge.com/images/badges/0-percent-optimized.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-c-plus-plus.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/it-works-why.svg)](https://forthebadge.com)
+<a href="https://forthebadge.com/" target="_blank">
+  <p align="center">
+    <img src="https://forthebadge.com/images/badges/0-percent-optimized.svg">
+    <img src="https://forthebadge.com/images/badges/made-with-c-plus-plus.svg">
+    <img src="https://forthebadge.com/images/badges/it-works-why.svg">
+  </p>
+</a>
 
 # bus-display
 Bad C++ console app to display data about a bus on a pixel display.  
