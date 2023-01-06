@@ -1,13 +1,19 @@
+#ifndef SYMBOLS_H_
+#define SYMBOLS_H_
 #pragma once
 
 #include <array>
+#include <unordered_map>
 
-constexpr int SYM_WIDTH  = 12;
-constexpr int SYM_HEIGHT = 20;
+#define SYM_WIDTH 12
+#define SYM_HEIGHT 20
 
-typedef std::array<bool, SYM_WIDTH> SYM_ROW; // Type used for centering the rows in draw.cpp
-typedef std::array<SYM_ROW, SYM_HEIGHT> SYM;
+// Type used for centering the rows in draw.cpp
+using SYM_ROW = std::array<bool, SYM_WIDTH>; 
+// A bitmap for the given symbol
+using SYM = std::array<SYM_ROW, SYM_HEIGHT>;
 
+/* Bitmaps of all symbols */
 extern const SYM SYM_ZERO;
 extern const SYM SYM_ONE;
 extern const SYM SYM_TWO;
@@ -103,3 +109,6 @@ extern const SYM SYM_CRLY_RIGHT;
 extern const SYM SYM_TILDE;
 extern const SYM SYM_ERR_UNKNOWN;
 
+extern std::unordered_map<char,SYM> SYMBOL_TABLE;
+
+#endif /* ifndef SYMBOLS_H_ */
