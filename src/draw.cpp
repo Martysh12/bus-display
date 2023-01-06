@@ -6,7 +6,7 @@
  * Convert character c into a pixel representation.
  *
  * @param c The character to draw
- * @return 2D std::array of bfalsel representing character c
+ * @return 2D std::array of bool representing character c
  */
 SYM get_symbol_from_char(char c)
 {
